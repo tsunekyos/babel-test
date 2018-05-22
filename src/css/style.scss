@@ -1,0 +1,196 @@
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+/* -- -- -- -- -- -- -- -- -- */
+
+
+body{
+}
+
+header{
+  width:100%;
+  height:50px;
+  background-color:grey;
+  text-align:center;
+}
+
+.moreBtn{
+  background-color:grey;
+  width:50%;
+  height:50px;
+  text-align:center;
+  margin:50px auto 200px;
+}
+
+.switchBtns{
+  position:fixed;
+  left:5%;
+  bottom:5%;
+
+  .switchBtn{
+    width:50px;
+    height:50px;
+    border:1px solid black;
+    margin-bottom:10px;
+    margin-right:10px;
+    overflow:hidden;
+    display:inline-block;
+  }
+}
+
+.products{
+  font-size:0;
+  &:after{
+    position:absolute;
+    width:0; height:0; overflow:hidden; z-index:-1;
+    content:
+      url("/images/a_oblique.jpg") url("/images/a_left.jpg") url("/images/a_back.jpg") url("/images/a_right.jpg") url("/images/a_sole.jpg") url("/images/a_top.jpg") url("/images/a_detail.jpg") url("/images/a_usage.jpg")
+      url("/images/b_oblique.jpg") url("/images/b_left.jpg") url("/images/b_back.jpg") url("/images/b_right.jpg") url("/images/b_sole.jpg") url("/images/b_top.jpg") url("/images/b_detail.jpg") url("/images/b_usage.jpg")
+      url("/images/c_oblique.jpg") url("/images/c_left.jpg") url("/images/c_back.jpg") url("/images/c_right.jpg") url("/images/c_sole.jpg") url("/images/c_top.jpg") url("/images/c_detail.jpg") url("/images/c_usage.jpg")
+      url("/images/d_oblique.jpg") url("/images/d_left.jpg") url("/images/d_back.jpg") url("/images/d_right.jpg") url("/images/d_sole.jpg") url("/images/d_top.jpg") url("/images/d_detail.jpg") url("/images/d_usage.jpg")
+      url("/images/e_oblique.jpg") url("/images/e_left.jpg") url("/images/e_back.jpg") url("/images/e_right.jpg") url("/images/e_sole.jpg") url("/images/e_top.jpg") url("/images/e_detail.jpg") url("/images/e_usage.jpg")
+      url("/images/f_oblique.jpg") url("/images/f_left.jpg") url("/images/f_back.jpg") url("/images/f_right.jpg") url("/images/f_sole.jpg") url("/images/f_top.jpg") url("/images/f_detail.jpg") url("/images/f_usage.jpg")
+    ;
+  }
+}
+
+.product{
+  width:50%;
+  height:0;
+  padding-top:50%;
+  display:inline-block;
+  background-size:contain;
+  background-repeat:no-repeat;
+  background-position:center center;
+}
+
+//この辺はscssかmtでループさせる
+@for $k from 1 through 6{
+  $targ:"";
+  @if $k == 1{ $targ: "a" }
+  @elseif $k == 2{ $targ: "b" }
+  @elseif $k == 3{ $targ: "c" }
+  @elseif $k == 4{ $targ: "d" }
+  @elseif $k == 5{ $targ: "e" }
+  @elseif $k == 6{ $targ: "f" }
+
+  [data-id="#{$targ}"]{
+
+    @for $i from 1 through 8{
+      $ang:"";
+      @if $i == 1{ $ang: "oblique" }
+      @elseif $i == 2{ $ang: "left" }
+      @elseif $i == 3{ $ang: "back" }
+      @elseif $i == 4{ $ang: "right" }
+      @elseif $i == 5{ $ang: "sole" }
+      @elseif $i == 6{ $ang: "top" }
+      @elseif $i == 7{ $ang: "detail" }
+      @elseif $i == 8{ $ang: "usage" }
+
+      &[data-ang="#{$ang}"]{
+        background-image:url("/images/#{$targ}_#{$ang}.jpg");
+      }
+    }
+  }
+
+}

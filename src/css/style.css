@@ -1,0 +1,348 @@
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input, select {
+  vertical-align: middle;
+}
+
+/* -- -- -- -- -- -- -- -- -- */
+header {
+  width: 100%;
+  height: 50px;
+  background-color: grey;
+  text-align: center;
+}
+
+.moreBtn {
+  background-color: grey;
+  width: 50%;
+  height: 50px;
+  text-align: center;
+  margin: 50px auto 200px;
+}
+
+.switchBtns {
+  position: fixed;
+  left: 5%;
+  bottom: 5%;
+}
+
+.switchBtns .switchBtn {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.products {
+  font-size: 0;
+}
+
+.products:after {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  z-index: -1;
+  content: url("/images/a_oblique.jpg") url("/images/a_left.jpg") url("/images/a_back.jpg") url("/images/a_right.jpg") url("/images/a_sole.jpg") url("/images/a_top.jpg") url("/images/a_detail.jpg") url("/images/a_usage.jpg") url("/images/b_oblique.jpg") url("/images/b_left.jpg") url("/images/b_back.jpg") url("/images/b_right.jpg") url("/images/b_sole.jpg") url("/images/b_top.jpg") url("/images/b_detail.jpg") url("/images/b_usage.jpg") url("/images/c_oblique.jpg") url("/images/c_left.jpg") url("/images/c_back.jpg") url("/images/c_right.jpg") url("/images/c_sole.jpg") url("/images/c_top.jpg") url("/images/c_detail.jpg") url("/images/c_usage.jpg") url("/images/d_oblique.jpg") url("/images/d_left.jpg") url("/images/d_back.jpg") url("/images/d_right.jpg") url("/images/d_sole.jpg") url("/images/d_top.jpg") url("/images/d_detail.jpg") url("/images/d_usage.jpg") url("/images/e_oblique.jpg") url("/images/e_left.jpg") url("/images/e_back.jpg") url("/images/e_right.jpg") url("/images/e_sole.jpg") url("/images/e_top.jpg") url("/images/e_detail.jpg") url("/images/e_usage.jpg") url("/images/f_oblique.jpg") url("/images/f_left.jpg") url("/images/f_back.jpg") url("/images/f_right.jpg") url("/images/f_sole.jpg") url("/images/f_top.jpg") url("/images/f_detail.jpg") url("/images/f_usage.jpg");
+}
+
+.product {
+  width: 50%;
+  height: 0;
+  padding-top: 50%;
+  display: inline-block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+[data-id="a"][data-ang="oblique"] {
+  background-image: url("/images/a_oblique.jpg");
+}
+
+[data-id="a"][data-ang="left"] {
+  background-image: url("/images/a_left.jpg");
+}
+
+[data-id="a"][data-ang="back"] {
+  background-image: url("/images/a_back.jpg");
+}
+
+[data-id="a"][data-ang="right"] {
+  background-image: url("/images/a_right.jpg");
+}
+
+[data-id="a"][data-ang="sole"] {
+  background-image: url("/images/a_sole.jpg");
+}
+
+[data-id="a"][data-ang="top"] {
+  background-image: url("/images/a_top.jpg");
+}
+
+[data-id="a"][data-ang="detail"] {
+  background-image: url("/images/a_detail.jpg");
+}
+
+[data-id="a"][data-ang="usage"] {
+  background-image: url("/images/a_usage.jpg");
+}
+
+[data-id="b"][data-ang="oblique"] {
+  background-image: url("/images/b_oblique.jpg");
+}
+
+[data-id="b"][data-ang="left"] {
+  background-image: url("/images/b_left.jpg");
+}
+
+[data-id="b"][data-ang="back"] {
+  background-image: url("/images/b_back.jpg");
+}
+
+[data-id="b"][data-ang="right"] {
+  background-image: url("/images/b_right.jpg");
+}
+
+[data-id="b"][data-ang="sole"] {
+  background-image: url("/images/b_sole.jpg");
+}
+
+[data-id="b"][data-ang="top"] {
+  background-image: url("/images/b_top.jpg");
+}
+
+[data-id="b"][data-ang="detail"] {
+  background-image: url("/images/b_detail.jpg");
+}
+
+[data-id="b"][data-ang="usage"] {
+  background-image: url("/images/b_usage.jpg");
+}
+
+[data-id="c"][data-ang="oblique"] {
+  background-image: url("/images/c_oblique.jpg");
+}
+
+[data-id="c"][data-ang="left"] {
+  background-image: url("/images/c_left.jpg");
+}
+
+[data-id="c"][data-ang="back"] {
+  background-image: url("/images/c_back.jpg");
+}
+
+[data-id="c"][data-ang="right"] {
+  background-image: url("/images/c_right.jpg");
+}
+
+[data-id="c"][data-ang="sole"] {
+  background-image: url("/images/c_sole.jpg");
+}
+
+[data-id="c"][data-ang="top"] {
+  background-image: url("/images/c_top.jpg");
+}
+
+[data-id="c"][data-ang="detail"] {
+  background-image: url("/images/c_detail.jpg");
+}
+
+[data-id="c"][data-ang="usage"] {
+  background-image: url("/images/c_usage.jpg");
+}
+
+[data-id="d"][data-ang="oblique"] {
+  background-image: url("/images/d_oblique.jpg");
+}
+
+[data-id="d"][data-ang="left"] {
+  background-image: url("/images/d_left.jpg");
+}
+
+[data-id="d"][data-ang="back"] {
+  background-image: url("/images/d_back.jpg");
+}
+
+[data-id="d"][data-ang="right"] {
+  background-image: url("/images/d_right.jpg");
+}
+
+[data-id="d"][data-ang="sole"] {
+  background-image: url("/images/d_sole.jpg");
+}
+
+[data-id="d"][data-ang="top"] {
+  background-image: url("/images/d_top.jpg");
+}
+
+[data-id="d"][data-ang="detail"] {
+  background-image: url("/images/d_detail.jpg");
+}
+
+[data-id="d"][data-ang="usage"] {
+  background-image: url("/images/d_usage.jpg");
+}
+
+[data-id="e"][data-ang="oblique"] {
+  background-image: url("/images/e_oblique.jpg");
+}
+
+[data-id="e"][data-ang="left"] {
+  background-image: url("/images/e_left.jpg");
+}
+
+[data-id="e"][data-ang="back"] {
+  background-image: url("/images/e_back.jpg");
+}
+
+[data-id="e"][data-ang="right"] {
+  background-image: url("/images/e_right.jpg");
+}
+
+[data-id="e"][data-ang="sole"] {
+  background-image: url("/images/e_sole.jpg");
+}
+
+[data-id="e"][data-ang="top"] {
+  background-image: url("/images/e_top.jpg");
+}
+
+[data-id="e"][data-ang="detail"] {
+  background-image: url("/images/e_detail.jpg");
+}
+
+[data-id="e"][data-ang="usage"] {
+  background-image: url("/images/e_usage.jpg");
+}
+
+[data-id="f"][data-ang="oblique"] {
+  background-image: url("/images/f_oblique.jpg");
+}
+
+[data-id="f"][data-ang="left"] {
+  background-image: url("/images/f_left.jpg");
+}
+
+[data-id="f"][data-ang="back"] {
+  background-image: url("/images/f_back.jpg");
+}
+
+[data-id="f"][data-ang="right"] {
+  background-image: url("/images/f_right.jpg");
+}
+
+[data-id="f"][data-ang="sole"] {
+  background-image: url("/images/f_sole.jpg");
+}
+
+[data-id="f"][data-ang="top"] {
+  background-image: url("/images/f_top.jpg");
+}
+
+[data-id="f"][data-ang="detail"] {
+  background-image: url("/images/f_detail.jpg");
+}
+
+[data-id="f"][data-ang="usage"] {
+  background-image: url("/images/f_usage.jpg");
+}
